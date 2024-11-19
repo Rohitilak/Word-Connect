@@ -1,14 +1,11 @@
-import React from "react";
-import WordConnect from "./components/WordConnect";
-import "./App.css";
+import React from 'react'
 
 function App() {
   return (
-    <div className="App">
-      <h1>Word Connect</h1>
-      <WordConnect />
+    <div>
+      word connect
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
