@@ -130,7 +130,7 @@ const GameBoard = ({ groupSize, itemCount, columns, attempts, setAttempts }) => 
                 ? "bg-green-500 text-white opacity-100 transition-opacity duration-1500"
                 : selected.includes(word)
                 ? "bg-blue-500 text-white"
-                : "bg-orange-500 text-white"
+                : "bg-white text-black"
             }`}
             style={{
               flex: `0 1 calc(100% / ${columns} - 10px)`,
