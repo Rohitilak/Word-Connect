@@ -86,7 +86,7 @@ const GameBoard = ({ groupSize, itemCount, columns, attempts, setAttempts }) => 
   useEffect(() => {
     // Check if the game is over
     const allCorrect = words.every((word) => word.status === "correctPending");
-  
+
     if (allCorrect) {
       setGameStatus("win"); // Player wins
       setIsGameOver(true); // End the game
@@ -95,7 +95,6 @@ const GameBoard = ({ groupSize, itemCount, columns, attempts, setAttempts }) => 
       setIsGameOver(true); // End the game
     }
   }, [words, attempts, isGameOver]); // Add isGameOver to prevent multiple updates
-  
 
   const handleReset = () => {
     setAttempts(0);
@@ -148,11 +147,14 @@ const GameBoard = ({ groupSize, itemCount, columns, attempts, setAttempts }) => 
       </div>
 
       {/* Show result only after game is over */}
-      {!isGameOver && (
+      {isGameOver && (
         <div className="mt-4 text-center">
-          <h2 className="text-3xl font-bold text-red-500">
-            {
-              gameStatus === "win" ? "You Win!" : "You Lose!"}
+          <h2
+            className={`text-3xl font-bold ${
+              gameStatus === "win" ? "text-green-500" : "text-red-500"
+            }`}
+          >
+            {gameStatus === "win" ? "You Win!" : "You Lose!"}
           </h2>
         </div>
       )}
