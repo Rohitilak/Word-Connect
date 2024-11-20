@@ -125,7 +125,7 @@ const GameBoard = ({ groupSize, itemCount, columns, attempts, setAttempts }) => 
               word.status === "correct"
                 ? "bg-green-500 text-white"
                 : word.status === "incorrect"
-                ? "bg-red-500 text-white"
+                ? "bg-white text-black"
                 : word.status === "correctPending"
                 ? "bg-green-500 text-white opacity-100 transition-opacity duration-1500"
                 : selected.includes(word)
