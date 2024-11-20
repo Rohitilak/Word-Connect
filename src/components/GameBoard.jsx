@@ -148,7 +148,7 @@ const GameBoard = ({ groupSize, itemCount, columns, attempts, setAttempts }) => 
       </div>
 
       {/* Show result only after game is over */}
-      {isGameOver && (
+      {!isGameOver && (
         <div className="mt-4 text-center">
           <h2 className="text-3xl font-bold text-red-500">
             {gameStatus === "win" ? "You Win!" : "You Lose!"}
