@@ -125,12 +125,12 @@ const GameBoard = ({ groupSize, itemCount, columns, attempts, setAttempts }) => 
               word.status === "correct"
                 ? "bg-green-500 text-white"
                 : word.status === "incorrect"
-                ? "bg-white text-black"
+                ? "bg-red-500 text-white"
                 : word.status === "correctPending"
                 ? "bg-green-500 text-white opacity-100 transition-opacity duration-1500"
                 : selected.includes(word)
                 ? "bg-blue-500 text-white"
-                : "bg-white text-black"
+                : "bg-orange-500 text-white"
             }`}
             style={{
               flex: `0 1 calc(100% / ${columns} - 10px)`,
